@@ -1,5 +1,4 @@
-﻿using System;
-namespace advent_of_code.Days
+﻿namespace advent_of_code.Days
 {
     internal class _4thDay
     {
@@ -9,7 +8,7 @@ namespace advent_of_code.Days
             using var reader = new StreamReader(path);
             var stringResult = reader.ReadToEnd();
             var lines = stringResult.Split('\n').Where(line => !string.IsNullOrEmpty(line));
-            foreach(var line in lines) 
+            foreach (var line in lines)
             {
                 var elfs = line.Split(',');
                 _elves.Add(new TupleElves(elfs[0], elfs[1]));
@@ -22,28 +21,6 @@ namespace advent_of_code.Days
 
     class TupleElves
     {
-        //int ElfOne;
-        //int ElfTwo;
-
-        //public TupleElves(string rangeElfOne, string rangeElfTwo)
-        //{
-        //    ElfOne = ElfTwo = 0;
-
-        //    var numbers1 = rangeElfOne.Split('-');
-        //    for (int i = int.Parse(numbers1[0]); i <= int.Parse(numbers1[1]); i++)
-        //    {
-        //        ElfOne |= (byte)Math.Pow(2, i - 1);
-        //    }
-
-        //    var numbers2 = rangeElfTwo.Split('-');
-        //    for (byte i = byte.Parse(numbers2[0]); i <= byte.Parse(numbers2[1]); i++)
-        //    {
-        //        ElfTwo |= (byte)Math.Pow(2, i - 1);
-        //    }
-        //}
-
-        //public bool FullyContains => (ElfOne | ElfTwo) == ElfOne || (ElfOne | ElfTwo) == ElfTwo;
-
         int lowerElfOne = 0;
         int upperElfOne = 0;
         int lowerElfTwo = 0;
@@ -53,10 +30,10 @@ namespace advent_of_code.Days
         {
             var numbers1 = rangeElfOne.Split('-');
             lowerElfOne = int.Parse(numbers1[0]);
-            upperElfOne= int.Parse(numbers1[1]);
+            upperElfOne = int.Parse(numbers1[1]);
             var numbers2 = rangeElfTwo.Split('-');
-            lowerElfTwo= int.Parse(numbers2[0]);
-            upperElfTwo= int.Parse(numbers2[1]);
+            lowerElfTwo = int.Parse(numbers2[0]);
+            upperElfTwo = int.Parse(numbers2[1]);
         }
 
         public bool FullyOverlaps => (lowerElfOne <= lowerElfTwo && upperElfOne >= upperElfTwo) || (lowerElfTwo <= lowerElfOne && upperElfTwo >= upperElfOne);
