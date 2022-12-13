@@ -9,6 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Days\Day5\" />
+    <None Remove="Days\Day5\Commands\" />
+  </ItemGroup>
+  <ItemGroup>
     <None Update="input1.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -24,5 +28,9 @@
     <None Update="input5.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Days\Day5\" />
+    <Folder Include="Days\Day5\Commands\" />
   </ItemGroup>
 </Project>

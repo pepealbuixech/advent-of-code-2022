@@ -1,4 +1,5 @@
 ﻿using advent_of_code.Days;
+using advent_of_code.Days.Day5;
 
 //Console.WriteLine("------------------------------------\n------------ first day -------------\n------------------------------------");
 //var firstDay = new _1stDay("input1.txt");
@@ -23,5 +24,6 @@
 
 Console.WriteLine("------------------------------------\n------------ fifth day ------------\n------------------------------------");
 var fifthhDay = new _5thDay("input5.txt");
-//Console.WriteLine($"Fully contains {forthDay.SumFullyContains}");
+Console.WriteLine($"Moving with cargo 9000 {fifthhDay.LoadInitialState().ExecuteWithCargo9000().GetStackState()}");
+Console.WriteLine($"Moving with cargo 9001 {fifthhDay.LoadInitialState().ExecuteWithCargo9001().GetStackState()}");
 //Console.WriteLine($"Partially contains {forthDay.SumPartiallyContains}");
