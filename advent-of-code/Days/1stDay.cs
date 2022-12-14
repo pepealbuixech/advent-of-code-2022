@@ -4,7 +4,7 @@ namespace advent_of_code.Days
 {
     internal class _1stDay
     {
-        private string[] _list;
+        private string[]? _list;
         public string[] List => GetStringList();
         public string Path { get; }
 
@@ -19,7 +19,7 @@ namespace advent_of_code.Days
             {
                 using var reader = new StreamReader(Path);
                 var stringResult = reader.ReadToEnd();
-                _list = stringResult.Split('\n');
+                _list = stringResult.Split('\n') ?? Array.Empty<string>();
             }
             return _list;
 

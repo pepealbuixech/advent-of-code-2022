@@ -4,8 +4,8 @@
     public class _5thDay
     {
         public Dictionary<int,Stack<char>> CrateStacks { get; private set; }
-        private string[] _commands;
-        private string[] _head;
+        private readonly string[] _commands;
+        private readonly string[] _head;
         public string _stacks;
 
         public _5thDay(string path)
@@ -14,6 +14,7 @@
             var stringResult = reader.ReadToEnd();
             var lines = stringResult.Split('\n');
             int blankLineIndex;
+            CrateStacks = new();
             
             //Find divior line
             for (blankLineIndex = 0; blankLineIndex < lines.Length; blankLineIndex++)
